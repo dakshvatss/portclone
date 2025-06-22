@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work in Progress - Sneha Agarwal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #2c2f33;
+            --bg-secondary: #36393f;
+            --accent: #7289da;
+            --accent-hover: #5b6eae;
+            --text-primary: #ffffff;
+            --text-secondary: #dddddd;
+            --shadow: rgba(0, 0, 0, 0.3);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .wip-title {
+            font-size: 4rem;
+            font-weight: 300;
+            margin-bottom: 2rem;
+            color: var(--accent);
+        }
+
+        .wip-subtitle {
+            font-size: 1.5rem;
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+        }
+
+        .back-button {
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .back-button:hover {
+            background: var(--accent-hover);
+            transform: translateY(-2px);
+        }
+
+        .project-image-container {
+            width: 98%;
+            max-width: none;
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            padding: 1rem;
+            box-shadow: 0 10px 30px var(--shadow);
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease 0.4s forwards;
+        }
+
+        @media (max-width: 768px) {
+            .project-image-container {
+                padding: 0.5rem;
+                width: 99%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="wip-title">Work in Progress</h1>
+        <p class="wip-subtitle">This project page is currently under development</p>
+        <a href="index.html" class="back-button">← Back to Portfolio</a>
+    </div>
+</body>
+</html>

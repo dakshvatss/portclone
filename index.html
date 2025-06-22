@@ -778,10 +778,10 @@
     <script>
         // Encrypted project passwords (Base64 encoded for basic obfuscation)
         const projectSecrets = {
-            project1: btoa("ibm2024"),      // Password: ibm2024
-            project2: btoa("recruit123"),   // Password: recruit123  
-            project3: btoa("accenture2024"), // Password: accenture2024
-            project4: btoa("techexpress2024") // Password: techexpress2024
+            project1: btoa("sneha@2025"),      // Password: ibm2024
+            project2: btoa("sneha@2025"),   // Password: recruit123  
+            project3: btoa("sneha@2025"), // Password: accenture2024
+            project4: btoa("sneha@2025") // Password: techexpress2024
         };
 
         let currentProject = null;
@@ -801,10 +801,12 @@
         }
 
         // Close password modal
-        function closePasswordModal() {
+        function closePasswordModal(keepProject = false) {
             document.getElementById('passwordModal').style.display = 'none';
             document.body.style.overflow = 'auto';
-            currentProject = null;
+            if (!keepProject) {
+                currentProject = null;
+            }
         }
 
         // Handle Enter key press in password input
@@ -826,15 +828,22 @@
                 return;
             }
 
+            // Check if we have a current project
+            if (!currentProject) {
+                passwordError.textContent = 'Project selection error. Please try again.';
+                passwordError.style.display = 'block';
+                return;
+            }
+
             // Check if entered password matches the encrypted password for current project
             const correctPassword = atob(projectSecrets[currentProject]);
             
             if (enteredPassword === correctPassword) {
-                // Password correct - redirect to a.html
-                closePasswordModal();
+                // Password correct - redirect to specific project page
+                closePasswordModal(true);
                 // Small delay for smooth transition
                 setTimeout(() => {
-                    window.location.href = 'project4.html';
+                    window.location.href = `${currentProject}.html`;
                 }, 200);
             } else {
                 // Password incorrect - show error
