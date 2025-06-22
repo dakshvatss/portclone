@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sneha Agarwal - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -22,7 +23,7 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background-color: var(--bg-primary);
             color: var(--text-primary);
             line-height: 1.6;
@@ -183,6 +184,7 @@
         .project-description {
             color: var(--text-secondary);
             font-size: 1rem;
+            font-weight: 300;
             line-height: 1.6;
             margin-bottom: 1.5rem;
         }
@@ -332,7 +334,7 @@
 
         .about-section-title {
             font-size: 2.5rem;
-            font-weight: 300;
+            font-weight: 600;
             margin-bottom: 2rem;
             color: var(--text-primary);
         }
@@ -352,6 +354,7 @@
 
         .about-text {
             font-size: 1.1rem;
+            font-weight: 300;
             color: var(--text-secondary);
             line-height: 1.7;
         }
@@ -364,7 +367,7 @@
 
         .contact-section-title {
             font-size: 2.5rem;
-            font-weight: 300;
+            font-weight: 600;
             margin-bottom: 1rem;
             color: var(--text-primary);
         }
@@ -778,10 +781,10 @@
     <script>
         // Encrypted project passwords (Base64 encoded for basic obfuscation)
         const projectSecrets = {
-            project1: btoa("sneha@2025"),      // Password: ibm2024
-            project2: btoa("sneha@2025"),   // Password: recruit123  
-            project3: btoa("sneha@2025"), // Password: accenture2024
-            project4: btoa("sneha@2025") // Password: techexpress2024
+            project1: btoa("ibm2024"),      // Password: ibm2024
+            project2: btoa("recruit123"),   // Password: recruit123  
+            project3: btoa("accenture2024"), // Password: accenture2024
+            project4: btoa("techexpress2024") // Password: techexpress2024
         };
 
         let currentProject = null;
