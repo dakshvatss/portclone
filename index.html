@@ -539,11 +539,16 @@
             .project-card:nth-child(even) {
                 flex-direction: column;
                 min-height: auto;
+                max-width: 100%;
+                margin: 0 auto;
             }
 
             .project-image {
+                height: 250px;
                 min-height: 250px;
+                max-height: 250px;
                 font-size: 3rem;
+                flex: none;
             }
 
             .project-image img {
@@ -555,6 +560,7 @@
 
             .project-info {
                 padding: 1.5rem;
+                flex: none;
             }
 
             .project-title {
@@ -585,7 +591,9 @@
 
         @media (max-width: 480px) {
             .project-image {
-                min-height: 200px;
+                height: 220px;
+                min-height: 220px;
+                max-height: 220px;
             }
 
             .main-content {
@@ -594,6 +602,18 @@
 
             .work-section {
                 padding: 2rem 0;
+            }
+
+            .projects-container {
+                gap: 2rem;
+            }
+
+            .project-card {
+                border-radius: 8px;
+            }
+
+            .project-info {
+                padding: 1.2rem;
             }
         }
 
