@@ -88,6 +88,77 @@
                 width: 99%;
             }
         }
+
+        /* Download Resume Section */
+        .download-section {
+            background: var(--bg-secondary);
+            padding: 3rem 0;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        .download-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .download-title {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .download-text {
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+            font-weight: 300;
+        }
+
+        .download-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .download-resume-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            background: var(--accent);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(114, 137, 218, 0.3);
+        }
+
+        .download-resume-btn:hover {
+            background: var(--accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(114, 137, 218, 0.4);
+        }
+
+        .download-resume-btn:active {
+            transform: translateY(0);
+        }
+
+        .download-icon {
+            font-size: 1.2rem;
+        }
+
+        @media (max-width: 768px) {
+
+            .download-title {
+                font-size: 1.8rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -96,5 +167,19 @@
         <p class="wip-subtitle">This project page is currently under development</p>
         <a href="index.html" class="back-button">← Back to Portfolio</a>
     </div>
+    <!-- Download Resume Section -->
+    <section class="download-section">
+        <div class="download-content">
+            <h2 class="download-title">Resume</h2>
+            <p class="download-text">Download my latest resume</p>
+
+            <div class="download-container">
+                <a href="https://drive.google.com/file/d/1vDZCjF0vxY7rDjBF8GtLp7-MbCUgMPBD/view" class="download-resume-btn" target="_blank" rel="noopener noreferrer">
+                    <span class="download-icon">⬇️</span>
+                    Download Resume
+                </a>
+            </div>
+        </div>
+    </section>
 </body>
 </html>

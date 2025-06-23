@@ -399,6 +399,38 @@
             transform: translateY(-3px);
         }
 
+        /* Download Resume Button */
+        .download-resume-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            background: var(--accent);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(114, 137, 218, 0.3);
+        }
+
+        .download-resume-btn:hover {
+            background: var(--accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(114, 137, 218, 0.4);
+        }
+
+        .download-resume-btn:active {
+            transform: translateY(0);
+        }
+
+        .download-icon {
+            font-size: 1.2rem;
+        }
+
         /* Back to Top Button */
         .back-to-top {
             position: fixed;
@@ -744,17 +776,16 @@
                 </div>
             </section>
 
-            <!-- Contact Section -->
-            <section id="contact" class="contact-section">
-                <h2 class="contact-section-title">Contact</h2>
-                <p style="color: var(--text-secondary); font-size: 1.1rem;">Let's work together</p>
+            <!-- Download Resume Section -->
+            <section id="resume" class="contact-section">
+                <h2 class="contact-section-title">Resume</h2>
+                <p style="color: var(--text-secondary); font-size: 1.1rem;">Download my latest resume</p>
                 
-                <div class="social-links">
-                    <a href="#" class="social-link" title="Email">📧</a>
-                    <a href="#" class="social-link" title="LinkedIn">💼</a>
-                    <a href="#" class="social-link" title="Twitter">🐦</a>
-                    <a href="#" class="social-link" title="Instagram">📷</a>
-                    <a href="#" class="social-link" title="Dribbble">🏀</a>
+                <div style="margin-top: 2rem;">
+                    <a href="https://drive.google.com/file/d/1vDZCjF0vxY7rDjBF8GtLp7-MbCUgMPBD/view" class="download-resume-btn" target="_blank" rel="noopener noreferrer">
+                        <span class="download-icon">⬇️</span>
+                        Download Resume
+                    </a>
                 </div>
             </section>
         </div>

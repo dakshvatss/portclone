@@ -183,58 +183,68 @@
             font-size: 1.2rem;
         }
 
-        /* Footer */
-        .footer {
+        /* Download Resume Section */
+        .download-section {
             background: var(--bg-secondary);
             padding: 3rem 0;
             text-align: center;
             margin-top: auto;
         }
 
-        .footer-content {
+        .download-content {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 2rem;
         }
 
-        .footer-title {
+        .download-title {
             font-size: 2rem;
             font-weight: 600;
             margin-bottom: 1rem;
             color: var(--text-primary);
         }
 
-        .footer-text {
+        .download-text {
             color: var(--text-secondary);
             margin-bottom: 2rem;
             font-size: 1.1rem;
             font-weight: 300;
         }
 
-        .social-links {
+        .download-container {
             display: flex;
             justify-content: center;
-            gap: 2rem;
         }
 
-        .social-link {
-            width: 50px;
-            height: 50px;
-            background: var(--bg-primary);
-            border-radius: 50%;
-            display: flex;
+        .download-resume-btn {
+            display: inline-flex;
             align-items: center;
-            justify-content: center;
-            color: var(--text-secondary);
-            text-decoration: none;
-            transition: all 0.3s ease;
-            font-size: 1.5rem;
-        }
-
-        .social-link:hover {
+            gap: 0.8rem;
             background: var(--accent);
             color: white;
-            transform: translateY(-3px);
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(114, 137, 218, 0.3);
+        }
+
+        .download-resume-btn:hover {
+            background: var(--accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(114, 137, 218, 0.4);
+        }
+
+        .download-resume-btn:active {
+            transform: translateY(0);
+        }
+
+        .download-icon {
+            font-size: 1.2rem;
         }
 
         /* Animations */
@@ -282,11 +292,7 @@
                 padding: 3rem 0 2rem;
             }
 
-            .social-links {
-                gap: 1rem;
-            }
-
-            .footer-title {
+            .download-title {
                 font-size: 1.8rem;
             }
         }
@@ -365,21 +371,20 @@
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <h2 class="footer-title">Let's Connect</h2>
-            <p class="footer-text">Interested in working together? Let's create something amazing!</p>
+    <!-- Download Resume Section -->
+    <section class="download-section">
+        <div class="download-content">
+            <h2 class="download-title">Resume</h2>
+            <p class="download-text">Download my latest resume</p>
             
-            <div class="social-links">
-                <a href="mailto:sneha@example.com" class="social-link" title="Email">📧</a>
-                <a href="#" class="social-link" title="LinkedIn">💼</a>
-                <a href="#" class="social-link" title="Twitter">🐦</a>
-                <a href="#" class="social-link" title="Instagram">📷</a>
-                <a href="#" class="social-link" title="Dribbble">🏀</a>
+            <div class="download-container">
+                <a href="https://drive.google.com/file/d/1vDZCjF0vxY7rDjBF8GtLp7-MbCUgMPBD/view" class="download-resume-btn" target="_blank" rel="noopener noreferrer">
+                    <span class="download-icon">⬇️</span>
+                    Download Resume
+                </a>
             </div>
         </div>
-    </footer>
+    </section>
 
     <script>
         // Back navigation
